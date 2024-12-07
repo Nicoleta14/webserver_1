@@ -51,4 +51,4 @@ def index():
 
 # Aplicația va rula pe toate interfețele de rețea ale gazdei (0.0.0.0) și pe portul 5000.
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=80)
