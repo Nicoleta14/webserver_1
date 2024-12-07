@@ -2,9 +2,14 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-# Copiem fișierul "app.py" din directorul local în directorul de lucru al containerului.
+# Copiem aplicația în container.
 COPY app.py /app
+
+# Instalăm dependențele necesare.
 RUN pip install flask redis
 
-# Specificăm să ruleze scriptul "app.py" folosind Python.
+# Expunem portul 5000 pentru aplicația Flask.
+EXPOSE 5000
+
+# Specificăm comanda de rulare.
 CMD ["python", "app.py"]
